@@ -18,7 +18,7 @@ class App {
     for (let i = 0; i < lottoNumberInstance.lottoBuyCount; i ++) {
       let lottoNumber = MissionUtils.Random.pickUniqueNumbersInRange(1, 45, 6);
       const lottoInstance = new Lotto(lottoNumber);
-      lottoInstance.validate(lottoNumber);
+      lottoInstance.duplicationCheck();
       lottoNumberInstance.numberList.push(lottoNumber);
       MissionUtils.Console.print(`[${lottoNumber.join(', ')}]`)
     }
