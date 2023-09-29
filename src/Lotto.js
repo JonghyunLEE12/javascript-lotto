@@ -1,3 +1,5 @@
+const { MissionUtils } = require("@woowacourse/mission-utils");
+
 class Lotto {
   #numbers;
 
@@ -7,6 +9,7 @@ class Lotto {
   }
 
   validate(numbers) {
+    MissionUtils.Console.readline(`당첨 번호를 입력해주세요`, (winnumber) => winnumber);
     if (numbers.length !== 6) {
       throw new Error("[ERROR] 로또 번호는 6개여야 합니다.");
     }
